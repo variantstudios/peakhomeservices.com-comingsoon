@@ -8,33 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-<style>
-.hero-image::after {
-  display: block;
-  bottom: 0;
-  position: absolute;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #000 100%);
-  margin-top: -650px;
-  height: 650px;
-  width: 100%;
-  content: '';
-}
-.page-title:after {
-    content: "";
-    display: block;
-    margin: 0;
-    width: 40%;
-    padding-top: 20px;
-    border-bottom: 10px solid white;
-}
-</style>
-    <!-- <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:900|Open+Sans" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+<style>
+
+</style>
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script>
@@ -45,8 +25,8 @@
   </head>
   <body>
     <div class="container m-auto text-grey-darkest">
-      <header class="flex items-center py-3">
-        <div class="">
+      <header class="md:flex flex-col md:flex-row items-center justify-center py-3 px-4">
+        <div class="text-center md:text-left md:mb-0 mb-4">
           <svg width="178" height="102" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
               <path
@@ -89,7 +69,7 @@
             </g>
           </svg>
         </div>
-        <div class="ml-auto text-right">
+        <div class="md:ml-auto text-center md:text-right">
           <p class="text-2xl text-green-darker leading-normal">
             <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -119,17 +99,15 @@
     </div>
 
       <div
-        class="bg-no-repeat bg-cover flex w-full relative hero-image z-10"
-        style="background: #000000 url('./img/hero.jpg') no-repeat center; background-size: cover; height: calc(100vh - 370px); min-height: 800px;"
-      >
+        class="bg-no-repeat bg-cover flex w-full relative hero-image z-10 overflow-hidden">
         <div
           class="text-white lg:w-3/5 leading-light p-8 absolute z-20"
           style="bottom: 30px; left: 30px;"
         >
-          <h1 class="text-5xl page-title mb-6 block">
+          <h1 class="text-2xl lg:text-5xl page-title mb-6 block">
             Your Northern Colorado’s Preferred Property Maintenance Company.
           </h1>
-          <h2 class="text-3xl font-normal leading-tight">
+          <h2 class="text-lg lg:text-3xl font-normal leading-tight">
             With Spring approaching, it’s a great time to have your property
             assessed for our Summer services! Call today to get your free
             estimate on any lawn & Garden, Landscaping, or Painting project.
@@ -139,11 +117,9 @@
       </div>
 
       <footer class="bg-green-darker text-white p-3">
-        <div class="flex flex-wrap md:flex-no-wrap">
+        <div class="md:flex md:flex-wrap md:flex-no-wrap">
           <div
-            class="px-4 py-2 m-2 w-full md:w-1/3 bg-green relative bg-center"
-            style="background-image:url('./img/lawn-garden.jpg'); min-height: 200px; background-size: cover;"
-          >
+            class="px-4 py-2 m-2 md:w-1/3 bg-green relative bg-center footer--lawn-garden">
             <h3
               class="inline-block background bg-white text-green-dark p-2 m-4 absolute pin-b"
             >
@@ -152,9 +128,7 @@
           </div>
 
           <div
-            class=" px-4 py-2 m-2 w-full md:w-1/3 bg-green relative bg-no-repeat"
-            style="background-image:url('./img/landscaping.jpg'); min-height: 200px; background-size: cover;"
-          >
+            class=" px-4 py-2 m-2 md:w-1/3 bg-green relative bg-no-repeat footer--landscaping">
             <h3
               class="inline-block background bg-white text-green-dark p-2 m-4 absolute pin-b"
             >
@@ -163,9 +137,7 @@
           </div>
 
           <div
-            class="px-4 py-2 m-2 w-full md:w-1/3 bg-green relative"
-            style="background-image:url('./img/painting.jpg'); min-height: 200px; background-size: cover;"
-          >
+            class="px-4 py-2 m-2 md:w-1/3 bg-green relative footer--painting">
             <h3
               class="inline-block background bg-white text-green-dark p-2 m-4 absolute pin-b"
             >
